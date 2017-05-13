@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="LogedIn.master.cs" Inherits="webProject.LogedIn" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="NavigationBarContentPlaceHolder" runat="server">
+    <asp:Button ID="LogoutButton" runat="server" CssClass="w3-bar-item w3-button" Text="Logout" style="float:right;"/>
+    <asp:Button ID="MessagesButton" runat="server" CssClass="w3-bar-item w3-button" Text="Messages" style="float:right;"/>
+    <asp:Button ID="FriendsButton" runat="server" CssClass="w3-bar-item w3-button" Text="Friends" style="float:right;"/>
+    <asp:Button ID="ProfileButton" runat="server" CssClass="w3-bar-item w3-button" Text="Profile" style="float:right;"/>
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
