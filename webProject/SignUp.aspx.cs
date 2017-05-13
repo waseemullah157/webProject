@@ -9,6 +9,7 @@ namespace webProject
 {
     public partial class SignUp : System.Web.UI.Page
     {
+        //Wasay Comment From Laptop
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack)
