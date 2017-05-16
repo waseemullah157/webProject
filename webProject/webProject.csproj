@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Home.aspx" />
+    <Content Include="mydb.accdb" />
     <Content Include="packages.config" />
     <Content Include="main.Master" />
     <Content Include="LogedOut.master" />
