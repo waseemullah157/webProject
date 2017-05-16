@@ -10,7 +10,7 @@ namespace webProject
 {
     public class DBHandler
     {
-        OleDbConnection con;
+        public OleDbConnection con;
         string connectionString;
         public DBHandler()
         {
@@ -21,7 +21,6 @@ namespace webProject
         private void createConnection()
         {
             con = new OleDbConnection(connectionString);
-            con.Open();
         }
         public string getConnectionString()
         {
@@ -34,9 +33,10 @@ namespace webProject
 
         public int addUser()
         {
+               createConnection();
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO users(userName, pass, gender, phNO, email,address) VALUES( @uname, @pass, @gender, @contactno, @email,@address); ",con);
             
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO users(userName, pass, gender, phNO, email,address) VALUES("
-               + " @uname, @pass, @gender, @contactno, @email,@address); ", con);
             String name = "Wasay";
             String email = "Syedwasay041";
             String contactno = "03445959907";
@@ -49,11 +49,9 @@ namespace webProject
             cmd.Parameters.AddWithValue("@contactno", contactno);
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@address", adress);
-            createConnection();
-           
+         
             try
             {
-                
                 cmd.ExecuteNonQuery();
             }
             finally
