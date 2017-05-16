@@ -21,6 +21,7 @@ namespace webProject
         private void createConnection()
         {
             con = new OleDbConnection(connectionString);
+            con.Open();
         }
         public string getConnectionString()
         {
@@ -49,9 +50,10 @@ namespace webProject
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@address", adress);
             createConnection();
-            con.Open();
+           
             try
             {
+                
                 cmd.ExecuteNonQuery();
             }
             finally
