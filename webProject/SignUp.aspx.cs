@@ -13,7 +13,7 @@ namespace webProject
         //Wasay Comment From Laptop
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            fullName.Text = (new DBHandler()).getConnectionString();
             if (IsPostBack)
             {
                 //Javaria Laptop Comment
