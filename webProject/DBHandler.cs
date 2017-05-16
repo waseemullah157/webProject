@@ -33,7 +33,8 @@ namespace webProject
 
         public int addUser()
         {
-            
+               createConnection();
+            con.Open();
             OleDbCommand cmd = new OleDbCommand("INSERT INTO users(userName, pass, gender, phNO, email,address) VALUES( @uname, @pass, @gender, @contactno, @email,@address); ",con);
             
             String name = "Wasay";
@@ -48,8 +49,7 @@ namespace webProject
             cmd.Parameters.AddWithValue("@contactno", contactno);
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@address", adress);
-            createConnection();
-            con.Open();
+         
             try
             {
                 cmd.ExecuteNonQuery();
