@@ -7,6 +7,11 @@ namespace webProject
 {
     public class DBHandler
     {
+        public bool validateLogin() {
+
+            return false;
+        }
+
         public int addUser()
         {
             String name = "Wasay";
