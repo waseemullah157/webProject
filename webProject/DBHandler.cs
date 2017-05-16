@@ -7,6 +7,7 @@ namespace webProject
 {
     public class DBHandler
     {
+        String con ="";
         public bool validateLogin() {
 
             return false;
