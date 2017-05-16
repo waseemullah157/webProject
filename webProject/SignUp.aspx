@@ -165,19 +165,19 @@
                             <td><asp:TextBox placeholder="Enter Your Complete Name" class="w3-input" ID="fullName" runat="server"></asp:TextBox></td>
                         </tr>
                         <tr>
-                            <td><asp:TextBox placeholder="Enter Your Email" class="w3-input" ID="TextBox1" runat="server"></asp:TextBox></td>
+                            <td><asp:TextBox placeholder="Enter Your Email" class="w3-input" ID="email" runat="server"></asp:TextBox></td>
                         </tr>
                         <tr>
-                            <td><asp:TextBox placeholder="Enter Your Phone Number" class="w3-input" ID="TextBox2" runat="server"></asp:TextBox></td>
+                            <td><asp:TextBox placeholder="Enter Your Phone Number" class="w3-input" ID="phone" runat="server"></asp:TextBox></td>
                         </tr>
                         <tr>
-                            <td><asp:TextBox type="password" placeholder="Enter New Password" class="w3-input" ID="TextBox3" runat="server"></asp:TextBox></td>
+                            <td><asp:TextBox type="password" placeholder="Enter New Password" class="w3-input" ID="pass" runat="server"></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td><asp:TextBox type="password" placeholder="Re-Enter Password" class="w3-input" ID="TextBox4" runat="server"></asp:TextBox></td>
                         </tr>
                         <tr>
-                            <td><asp:TextBox placeholder="Enter Your Complete Address" class="w3-input" ID="TextBox5" runat="server"></asp:TextBox></td>
+                            <td><asp:TextBox placeholder="Enter Your Complete Address" class="w3-input" ID="addres" runat="server"></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>

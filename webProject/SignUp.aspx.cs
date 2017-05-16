@@ -13,11 +13,26 @@ namespace webProject
         //Wasay Comment From Laptop
         protected void Page_Load(object sender, EventArgs e)
         {
-            new DBHandler().addUser();
-            fullName.Text = (new DBHandler()).getConnectionString();
+
+            
+           
             if (IsPostBack)
             {
-                
+                int a = 0;
+               string gen = genderDropDownList.Text;
+                if (gen.Equals("Male"))
+                    a = 1;
+                else if (gen.Equals("Female"))
+                    a = 0;
+                else
+                    a = 2;
+                new DBHandler().addUser(fullName.Text, email.Text, phone.Text, pass.Text,addres.Text, a);
+
+                Response.Redirect("Home.aspx");
+
+
+                    
+
                 //Javaria Laptop Comment
             }
         }

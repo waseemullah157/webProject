@@ -31,18 +31,18 @@ namespace webProject
             return false;
         }
 
-        public int addUser()
+        public int addUser(String name ,
+        String email ,
+        String contactno,
+        String password ,
+        String adress,
+        int gender )
         {
                createConnection();
             con.Open();
             OleDbCommand cmd = new OleDbCommand("INSERT INTO users(userName, pass, gender, phNO, email,address) VALUES( @uname, @pass, @gender, @contactno, @email,@address); ",con);
             
-            String name = "Wasay";
-            String email = "Syedwasay041";
-            String contactno = "03445959907";
-            String password = "123";
-            String adress = "House no 213";
-            int gender = 0;
+            
             cmd.Parameters.AddWithValue("@uname",name);
             cmd.Parameters.AddWithValue("@pass", password);
             cmd.Parameters.AddWithValue("@gender",gender );
