@@ -8,6 +8,7 @@ namespace webProject
 {
     public class DBHandler
     {
+        String con ="";
         string connectionString;
         public DBHandler()
         {
