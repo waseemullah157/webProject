@@ -10,7 +10,7 @@ namespace webProject
 {
     public class DBHandler
     {
-        OleDbConnection con;
+        public OleDbConnection con;
         string connectionString;
         public DBHandler()
         {
@@ -34,8 +34,8 @@ namespace webProject
         public int addUser()
         {
             
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO users(userName, pass, gender, phNO, email,address) VALUES("
-               + " @uname, @pass, @gender, @contactno, @email,@address); ", con);
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO users(userName, pass, gender, phNO, email,address) VALUES( @uname, @pass, @gender, @contactno, @email,@address); ",con);
+            
             String name = "Wasay";
             String email = "Syedwasay041";
             String contactno = "03445959907";
